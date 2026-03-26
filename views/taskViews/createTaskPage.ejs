@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Add Task</h2>
+
+    <form action="/dashboard/create-task" method="POST">
+        <input type="text" name="task" placeholder="Task title" required>
+
+        <textarea name="description" placeholder="Task description" required></textarea>
+
+        <select name="status">
+            <option value="In-Progress">In-Progress</option>
+            <option value="Finished">Finished</option>
+            <option value="Out-Of-Date">Out-Of-Date</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+    </form>
+</div>
+
+</body>
+</html>
