@@ -12,9 +12,6 @@ app.set('view engine','ejs')
 app.use('/',authRoute)
 //only user routes
 app.use('/',taskRoute)
-app.get('/Home',(req,res)=>{
-    res.render('home')
-})
 
 module.exports = app
 
